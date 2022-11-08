@@ -3,6 +3,7 @@ package com.motivity.Hospital.controllers;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -28,7 +29,7 @@ public class HomeController {
 	
 	@Autowired
 	PatientRepo patientRepo;
-	@RequestMapping("/")
+	@GetMapping("/")
 	ModelAndView showHomePage()
 	{
 		session.setAttribute("doctorrepo", doctorRepo);
